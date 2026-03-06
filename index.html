@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github-Issue-Tracker</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind and DaisyUi -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body class="bg-[#f7fafc]">
+    <section class="flex items-center justify-center h-screen ">
+  <div class="fieldset bg-white border-base-300 shadow-sm w-full max-w-[450px]  rounded-box border p-6">
+   <div class="flex flex-col items-center justify-center pb-8">
+    <img class="w-24 pb-5" src="assets/github-logo.png" alt="">
+    <h1 class="font-semibold text-2xl">GitHub Issues Tracker</h1>
+    <p class="text-sm text-[#64748B]">Sign in to manage your issues</p>
+  </div>
+  
+  <label class="label">Username</label>
+  <input id="username" type="email" class="input w-full" placeholder="Enter Username" />
+  <p class="text-primary">Default: admin</p>
+
+  <label class="label">Password</label>
+  <input id="password" type="password" class="input w-full" placeholder="Enter Password" />
+  <p class="text-primary">Default: admin123</p>
+
+  <button id="loginBtn" class="btn btn-primary mt-4">Login</button>
+  <fieldset class="border-t border-gray-200 "><legend class="text-base font-medium mx-auto px-4 py-2">OR</legend></fieldset>
+  <div class="flex items-center flex-col">
+    <p class="text-sm text-[#64748B] pb-2">Demo Credentials:</p>
+  <div class="flex items-center flex-col rounded-lg bg-gray-100 px-20 py-4">
+    <p class="text-base cursor-pointer hover:text-primary" onclick="copy('admin')"><span class=" font-bold">Username:</span> admin</p>
+    <p class="text-base cursor-pointer hover:text-primary" onclick="copy('admin123')"><span class="font-bold">Password:</span> admin123</p>
+  </div>
+  </div>
+  </div>
+  
+    </section>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
