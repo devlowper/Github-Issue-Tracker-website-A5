@@ -22,11 +22,78 @@
 
 </head>
 <body class="bg-[#f7fafc]">
-   <section>
-    <h1 class="text-7xl h-screen font-extrabold flex items-center justify-center text-primary">Testing</h1>
+   <header class="">
+    <div class="navbar bg-base-100 shadow-sm p-8 md:p-4 md:justify-between flex-col md:flex-row">
+  <div class=" btn btn-link no-underline navbar-start gap-2 flex-nowrap w-full pb-10 justify-center md:justify-start md:pb-0 md:w-auto">
+    <img class="w-10 " src="assets/github-logo.png" alt="">
+    <a class="font-bold text-xl text-neutral">GitHub Issues Tracker</a>
+  </div>
+
+  
+
+
+  <div class="navbar-end gap-4 w-full">
+    <div class="">
+    <label class="input">
+    <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <g
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-width="2.5"
+      fill="none"
+      stroke="currentColor"
+    >
+      <circle cx="11" cy="11" r="8"></circle>
+      <path d="m21 21-4.3-4.3"></path>
+    </g>
+    </svg>
+    <input type="search" required placeholder="Search issues..." />
+    </label>
+    </div>
+
+    <a class="btn btn-primary"><i class="fa-solid fa-plus"></i> New Issue</a>
+    </div>
+    </div>
+   </header>
+
+   <section class="max-w-7xl mx-auto px-4 mt-6 md:mt-12">
+    <div class="bg-white rounded-lg shadow-sm p-5 md:p-6 grid grid-cols-3 gap-3 md:flex md:w-full ">
+      <button onclick="loadData();" class="btn btn-outline border-slate-200 text-slate-500 rounded-md px-10">All</button>
+      <button onclick="showOpenIssues()" class="btn btn-outline border-slate-200 text-slate-500 rounded-md px-10">Open</button>
+      <button onclick="showClosedIssues()" class="btn btn-outline border-slate-200 text-slate-500 rounded-md px-10">Closed</button>
+    </div>
    </section>
-    
+
+
+   <section class=" max-w-7xl mx-auto px-4 py-5 ">
+  <main class="bg-[#fafafa] shadow-xl rounded-lg"><div class="bg-white p-6  rounded-t-lg  border-b-1 border-slate-300 flex justify-between items-center">
+
+  <div class="flex gap-4 items-center">
+      <img class="w-12 h-12 bg-[#ECE4FF] rounded-full p-2" src="assets/Aperture.png" alt="">
+      <div> <h1 class="font-bold text-xl"><span id="issue-count">0</span> Issues</h1>
+      <p class="text-base text-slate-500">Track and manage your project issues</p>
+    </div>
+  </div>
+
+  <div class=" md:flex gap-4 text-sm font-medium">
+      <span class="flex items-center gap-2"><div class="w-3 h-3 bg-[#00A96E] rounded-full"></div> Open</span>
+      <span class="flex items-center gap-2"><div class="w-3 h-3 bg-[#A855F7] rounded-full"></div> Closed</span>
+  </div>
+  </div>
+
+  <!-- card box -->
+  <div id="card-container" class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-6">
+  <!--Card  -->
+  </main>
+
+  </div>
+   </section>
+
+
+   
+
 
     <script src="script.js"></script>
 </body>
 </html>
+
