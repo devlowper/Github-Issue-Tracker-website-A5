@@ -33,8 +33,8 @@
 
 
   <div class="navbar-end gap-4 w-full">
-    <div class="">
-    <label class="input">
+    
+    <label  class="input">
     <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <g
       stroke-linejoin="round"
@@ -47,9 +47,9 @@
       <path d="m21 21-4.3-4.3"></path>
     </g>
     </svg>
-    <input type="search" required placeholder="Search issues..." />
+    <input id="searchInput" type="search" required placeholder="Search issues..." />
     </label>
-    </div>
+    
 
     <a class="btn btn-primary"><i class="fa-solid fa-plus"></i> New Issue</a>
     </div>
@@ -58,9 +58,9 @@
 
    <section class="max-w-7xl mx-auto px-4 mt-6 md:mt-12">
     <div class="bg-white rounded-lg shadow-sm p-5 md:p-6 grid grid-cols-3 gap-3 md:flex md:w-full ">
-      <button onclick="loadData();" class="btn btn-outline border-slate-200 text-slate-500 rounded-md px-10">All</button>
-      <button onclick="showOpenIssues()" class="btn btn-outline border-slate-200 text-slate-500 rounded-md px-10">Open</button>
-      <button onclick="showClosedIssues()" class="btn btn-outline border-slate-200 text-slate-500 rounded-md px-10">Closed</button>
+      <button id="btn-all" onclick="loadData();" class="btn btn-outline border-slate-200 text-slate-500 rounded-md px-10">All</button>
+      <button id="btn-open" onclick="showOpenIssues()" class="btn btn-outline border-slate-200 text-slate-500 rounded-md px-10">Open</button>
+      <button id="btn-close" onclick="showClosedIssues()" class="btn btn-outline border-slate-200 text-slate-500 rounded-md px-10">Closed</button>
     </div>
    </section>
 
@@ -81,6 +81,10 @@
   </div>
   </div>
 
+ <div class="flex justify-center my-6">
+    <span id="loader" class="loading loading-spinner loading-xl text-primary hidden"></span>
+ </div>
+
   <!-- card box -->
   <div id="card-container" class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-6">
   <!--Card  -->
@@ -88,6 +92,46 @@
 
   </div>
    </section>
+
+
+   <!-- Modal  -->
+   <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle ">
+  <div class="modal-box space-y-6 ">
+    <h3 id="modal-title" class="text-2xl font-bold ">Fix broken image uploads</h3>
+    
+    <div class="flex flex-row gap-2 items-center ">
+        <span id="modal-status" class="font-medium px-4 py-1 text-sm rounded-full bg-[#00A96E] text-white border-[#BBF7D0] hover:bg-[#DEFCE8] hover:text-[#00A96E]">Opened</span>
+        <p id="modal-author" class="text-[#64748B] text-sm "><i class="fa-regular fa-user"></i>  Opened by Fahim Ahmed</p><span id="modal-date" class="text-sm text-[#64748B]"><i class="fa-regular fa-calendar"></i> 22/02/2026</span>
+    </div>
+
+    <div id="modal-labels">
+      <span class="font-medium px-4 py-1 text-sm rounded-full border bg-[#FEECEC] text-[#EF4444] border-[#FECACA] hover:bg-[#EF4444] hover:text-white"><i class="fa-solid fa-bug"></i> BUG</span>
+       <span class="font-medium px-4 py-1 text-sm rounded-full border bg-[#FFF8DB] text-[#D97706] border-[#FDE68A] hover:bg-[#D97706] hover:text-white"><i class="fa-solid fa-life-ring"></i> HELP WANTED</span>
+    </div>
+
+    <p id="modal-description" class="text-[#64748B]">The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior.</p>
+
+    <div class="flex items-center justify-between rounded-lg bg-gray-50 border-gray-200 border w-full p-5 ">
+    <div class="space-y-3">
+      <p class="text-[#64748B]">Assignee:</p>
+      <h2 id="modal-assignee" class="font-bold">Fahim Ahmed</h2>
+    </div>
+    <div class="space-y-3">
+      <p class="text-[#64748B]">Priority:</p>
+      <span id="modal-priority" class="">HIGH</span>
+    </div>
+  </div>
+    
+    <div class="modal-action">
+      <form method="dialog">
+
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn btn-primary">Close</button>
+      </form>
+    </div>
+
+  </div>
+</dialog>
 
 
    

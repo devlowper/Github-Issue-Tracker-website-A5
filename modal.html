@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github-Issue-Tracker</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind and DaisyUi -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body class="bg-[#f7fafc]">
+    <!-- Open the modal using ID.showModal() method -->
+<button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle ">
+  <div class="modal-box space-y-6 ">
+    <h3 class="text-2xl font-bold ">Fix broken image uploads</h3>
+    
+    <div class="flex flex-row gap-2 items-center ">
+        <span class="font-medium px-4 py-1 text-sm rounded-full bg-[#00A96E] text-white border-[#BBF7D0] hover:bg-[#DEFCE8] hover:text-[#00A96E]">Opened</span>
+        <p class="text-[#64748B] text-sm "><i class="fa-regular fa-user"></i>  Opened by Fahim Ahmed</p><span class="text-sm text-[#64748B]"><i class="fa-regular fa-calendar"></i> 22/02/2026</span>
+
+    </div>
+
+    <div>
+      <span class="font-medium px-4 py-1 text-sm rounded-full border bg-[#FEECEC] text-[#EF4444] border-[#FECACA] hover:bg-[#EF4444] hover:text-white"><i class="fa-solid fa-bug"></i> BUG</span>
+       <span class="font-medium px-4 py-1 text-sm rounded-full borderbg-[#FFF8DB] text-[#D97706] border-[#FDE68A] hover:bg-[#D97706] hover:text-white"><i class="fa-solid fa-life-ring"></i> HELP WANTED</span>
+    </div>
+
+    <p class="text-[#64748B]">The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior.</p>
+
+    <div class="flex items-center justify-between rounded-lg bg-gray-50 border-gray-200 border w-full p-5 ">
+    <div class="space-y-3">
+      <p class="text-[#64748B]">Assignee:</p>
+      <h2 class="font-bold">Fahim Ahmed</h2>
+    </div>
+    <div class="space-y-3">
+      <p class="text-[#64748B]">Priority:</p>
+      <span class="font-medium px-4 py-1 text-sm rounded-full bg-[#EF4444] text-white hover:bg-[#FEECEC] hover:text-[#EF4444]">HIGH</span>
+    </div>
+  </div>
+    
+    <div class="modal-action">
+      <form method="dialog">
+
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn btn-primary">Close</button>
+      </form>
+    </div>
+
+  </div>
+</dialog>
+
+<span id="loader" class="loading loading-spinner loading-xl text-primary hidden"></span>
+    <script src="script.js"></script>
+</body>
+</html>
